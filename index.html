@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>TRON 渗入地址生成器</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <h1>TRON 地址生成器 · 专业版</h1>
+    <p class="desc">
+      本地批量生成 TRON 钱包地址（真地址），私钥不上传、不联网。
+    </p>
+
+    <div class="controls">
+      <label>
+        生成数量
+        <input id="count" type="number" min="1" max="1000" value="5" />
+      </label>
+
+      <button id="generateBtn">开始生成</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>TRON 地址</th>
+          <th>私钥</th>
+        </tr>
+      </thead>
+      <tbody id="result"></tbody>
+    </table>
+  </div>
+
+  <!-- 稳定依赖 -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tronweb/dist/TronWeb.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
